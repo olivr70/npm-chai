@@ -7,6 +7,9 @@ import {Should} from './Should.d.ts';
 import {Config} from './Config.d.ts';
 import {utils} from './utils.d.ts';
 
+
+export * from './Assertion.d.ts';
+
 export interface Chai {
   AssertionError: typeof AssertionError;
   Assertion: AssertionStatic;

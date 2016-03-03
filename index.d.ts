@@ -10,4 +10,6 @@ import {Chai} from './lib/Chai.d.ts';
 
 declare var chai: Chai;
 
-export = chai;
+export default chai;
+
+export * from './lib/Chai.d.ts';
