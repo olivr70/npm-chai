@@ -12,6 +12,23 @@ export interface ChaiExtension {
   (chai: any):void
 }
 
+
+export * from './Assertion';
+export * from 'assertion-error';
+export {AssertStatic} from './Assert';
+export {AssertionStatic, Assertion} from './Assertion';
+export {ExpectStatic} from './Expect';
+export {Should} from './Should';
+export {Config} from './Config';
+export {Utils} from './Utils';
+
+export declare var expect:ExpectStatic;
+export declare var assert:AssertStatic;
+export declare var config:Config;
+export declare var util:Utils;
+export function should(): Should;
+export function use(fn: ((chai: any, utils: Utils) => void) | ((chai: any) => void) ): Chai;
+
 export interface Chai {
   AssertionError: typeof AssertionError;
   Assertion: AssertionStatic;

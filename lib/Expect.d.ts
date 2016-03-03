@@ -1,4 +1,4 @@
-import {AssertionStatic} from './Assertion.d.ts';
+import {AssertionStatic} from './Assertion';
 
 export interface ExpectStatic extends AssertionStatic {
   fail(actual?: any, expected?: any, message?: string, operator?: string): void;
