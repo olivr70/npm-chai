@@ -10,6 +10,15 @@ import {utils} from './utils.d.ts';
 
 export * from './Assertion.d.ts';
 
+export * from 'assertion-error';
+export declare var expect:ExpectStatic;
+export declare var Assertion:AssertionStatic;
+export declare var assert:AssertStatic;
+export declare var config:Config;
+export declare var util:utils;
+export function should(): Should;
+export function use(fn: (chai: any, utils: utils) => void): Chai;
+
 export interface Chai {
   AssertionError: typeof AssertionError;
   Assertion: AssertionStatic;
