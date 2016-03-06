@@ -19,6 +19,11 @@ export declare var util:utils;
 export function should(): Should;
 export function use(fn: (chai: any, utils: utils) => void): Chai;
 
+export interface ChaiExtension {
+  (chai: any, utils: utils):void;
+  (chai: any):void
+}
+
 export interface Chai {
   AssertionError: typeof AssertionError;
   Assertion: AssertionStatic;
@@ -30,8 +35,10 @@ export interface Chai {
 
   /**
    * Provides a way to extend the internals of Chai
+   *  fn will always be invoked with 2 arguments, but extension
+   * is not required to use utils
    */
-  use(fn: (chai: any, utils: utils) => void): Chai;
+  use(fn: ChaiExtension): Chai;
 }
 
 declare global {
