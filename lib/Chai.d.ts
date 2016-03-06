@@ -9,9 +9,14 @@ import {utils} from './utils.d.ts';
 
 
 export * from './Assertion.d.ts';
+export * from 'assertion-error';
+export {AssertStatic} from './Assert.d.ts';
+export {AssertionStatic} from './Assertion.d.ts';
+export {ExpectStatic} from './Expect.d.ts';
+export {Should} from './Should.d.ts';
+export {Config} from './Config.d.ts';
 export {utils} from './utils.d.ts';
 
-export * from 'assertion-error';
 export declare var expect:ExpectStatic;
 export declare var Assertion:AssertionStatic;
 export declare var assert:AssertStatic;
