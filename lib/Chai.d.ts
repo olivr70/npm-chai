@@ -9,6 +9,7 @@ import {utils} from './utils.d.ts';
 
 
 export * from './Assertion.d.ts';
+export {utils} from './utils.d.ts';
 
 export * from 'assertion-error';
 export declare var expect:ExpectStatic;
