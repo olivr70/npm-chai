@@ -1,11 +1,11 @@
-import {Assertion} from './Assertion';
 import {AssertionError} from 'assertion-error';
+
 import {AssertStatic} from './Assert';
-import {AssertionStatic} from './Assertion';
+import {AssertionStatic, Assertion} from './Assertion';
 import {ExpectStatic} from './Expect';
 import {Should} from './Should';
 import {Config} from './Config';
-import {utils} from './utils';
+import {Utils} from './Utils';
 
 export interface Chai {
   AssertionError: typeof AssertionError;
@@ -13,13 +13,13 @@ export interface Chai {
   expect: ExpectStatic;
   assert: AssertStatic;
   config: Config;
-  util: utils;
+  util: Utils;
   should(): Should;
 
   /**
    * Provides a way to extend the internals of Chai
    */
-  use(fn: (chai: any, utils: utils) => void): Chai;
+  use(fn: (chai: any, utils: Utils) => void): Chai;
 }
 
 declare global {
