@@ -1,4 +1,4 @@
-/// <reference path="../bundle.d.ts" />
+/// <reference path="./main.d.ts" />
 import c = require('chai');
 
 c.should()
@@ -11,4 +11,6 @@ c.use((chai, utils) => {
 });
 
 let someObject = {};
-console.log(someObject.should.be.an('object'));
+someObject.should.be.an('object');
+
+console.log('DONE');

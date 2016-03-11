@@ -1,4 +1,4 @@
-export interface utils {
+export interface Utils {
   addChainableMethod(ctx: any, name: string, chainingBehavior: (value: any) => void);
   addMethod(ctx: any, name: string, method: (value: any) => void);
   addProperty(ctx: any, name: string, getter: () => void);

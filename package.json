@@ -6,8 +6,8 @@
     "test": "test"
   },
   "scripts": {
-    "bundle": "typings bundle index.d.ts -o bundle.d.ts",
-    "test": "npm run bundle && ts-node -n test/test.ts"
+    "build": "typings bundle -o test",
+    "test": "ts-node -n test/test.ts"
   },
   "dependencies": {},
   "devDependencies": {

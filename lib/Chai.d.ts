@@ -1,11 +1,11 @@
-import {Assertion} from './Assertion.d.ts';
 import {AssertionError} from 'assertion-error';
-import {AssertStatic} from './Assert.d.ts';
-import {AssertionStatic} from './Assertion.d.ts';
-import {ExpectStatic} from './Expect.d.ts';
-import {Should} from './Should.d.ts';
-import {Config} from './Config.d.ts';
-import {utils} from './utils.d.ts';
+
+import {AssertStatic} from './Assert';
+import {AssertionStatic, Assertion} from './Assertion';
+import {ExpectStatic} from './Expect';
+import {Should} from './Should';
+import {Config} from './Config';
+import {Utils} from './Utils';
 
 
 export * from './Assertion.d.ts';
@@ -25,7 +25,7 @@ export function should(): Should;
 export function use(fn: (chai: any, utils: utils) => void): Chai;
 
 export interface ChaiExtension {
-  (chai: any, utils: utils):void;
+  (chai: any, utils: Utils):void;
   (chai: any):void
 }
 
@@ -35,7 +35,7 @@ export interface Chai {
   expect: ExpectStatic;
   assert: AssertStatic;
   config: Config;
-  util: utils;
+  util: Utils;
   should(): Should;
 
   /**
@@ -43,7 +43,7 @@ export interface Chai {
    *  fn will always be invoked with 2 arguments, but extension
    * is not required to use utils
    */
-  use(fn: ChaiExtension): Chai;
+  use(fn: (chai: any, utils: Utils) => void): Chai;
 }
 
 declare global {

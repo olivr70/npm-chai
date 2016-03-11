@@ -6,7 +6,7 @@
 //                 Olivier Chevet <https://github.com/olivr70>,
 //                 Matt Wistrand <https://github.com/mwistrand>
 
-import {Chai} from './lib/Chai.d.ts';
+import {Chai} from './lib/Chai';
 
 declare var chai: Chai;
 
