@@ -12,4 +12,4 @@ declare var chai: Chai;
 
 export default chai;
 
-export * from './lib/Chai.d.ts';
+export * from './lib/Chai';
