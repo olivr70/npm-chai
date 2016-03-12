@@ -8,21 +8,21 @@ import {Config} from './Config';
 import {Utils} from './Utils';
 
 
-export * from './Assertion.d.ts';
+export * from './Assertion';
 export * from 'assertion-error';
-export {AssertStatic} from './Assert.d.ts';
-export {AssertionStatic, Assertion} from './Assertion.d.ts';
-export {ExpectStatic} from './Expect.d.ts';
-export {Should} from './Should.d.ts';
-export {Config} from './Config.d.ts';
-export {utils} from './utils.d.ts';
+export {AssertStatic} from './Assert';
+export {AssertionStatic, Assertion} from './Assertion';
+export {ExpectStatic} from './Expect';
+export {Should} from './Should';
+export {Config} from './Config';
+export {Utils} from './Utils';
 
 export declare var expect:ExpectStatic;
 export declare var assert:AssertStatic;
 export declare var config:Config;
-export declare var util:utils;
+export declare var util:Utils;
 export function should(): Should;
-export function use(fn: (chai: any, utils: utils) => void): Chai;
+export function use(fn: ((chai: any, utils: Utils) => void) | ((chai: any) => void) ): Chai;
 
 export interface ChaiExtension {
   (chai: any, utils: Utils):void;
