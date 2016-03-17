@@ -7,12 +7,6 @@ import {Should} from './Should';
 import {Config} from './Config';
 import {Utils} from './Utils';
 
-export interface ChaiExtension {
-  (chai: any, utils: utils):void;
-  (chai: any):void
-}
-
-
 export * from './Assertion';
 export * from 'assertion-error';
 export {AssertStatic} from './Assert';
@@ -29,6 +23,11 @@ export declare var util:Utils;
 export function should(): Should;
 export function use(fn: ((chai: any, utils: Utils) => void) | ((chai: any) => void) ): Chai;
 
+export interface ChaiExtension {
+  (chai: any, utils: Utils):void;
+  (chai: any):void
+}
+
 export interface Chai {
   AssertionError: typeof AssertionError;
   Assertion: AssertionStatic;
@@ -43,8 +42,7 @@ export interface Chai {
    *  fn will always be invoked with 2 arguments, but extension
    * is not required to use utils
    */
-  use(fn: (chai: any, utils: Utils) => void): Chai;
-  use(fn: ChaiExtension): Chai;
+  use( fn: ((chai: any, utils: Utils) => void) | ((chai: any) => void) ): Chai;
 }
 
 declare global {
